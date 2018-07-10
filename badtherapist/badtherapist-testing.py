@@ -1,4 +1,6 @@
 ### BAD THERAPIST
+### HB Project 5 June 2018 - 5 July 2018
+### 
 ### Sometimes therapy works, sometimes it doesn't.  You be the judge
 """ * This is part game/part therapy inspired by humor that uses everything learned in Prep"""
 
@@ -6,25 +8,27 @@ import random
 
 therapists = ["Brighticorn", "Unikitty", "Pikachu", "Shawn Mendes"]
 
-shawn_dict = {"sad": "happy good vibes",
-			  "happy": "so happy, so very happy for you",
-			  "angry": "girl, you need to chill out",
-			  "nervous": "breathe, baby, breathe"}
+# shawn_dict = {"sad": "happy good vibes",
+# 			  "happy": "so happy, so very happy for you",
+# 			  "angry": "girl, you need to chill out",
+# 			  "nervous": "breathe, baby, breathe"}
 
-pikachu_dict = {"sad": "happy good vibes",
-			  "happy": "so happy, so very happy for you",
-			  "angry": "girl, you need to chill out",
-			  "nervous": "breathe, baby, breathe"}
+# pikachu_dict = {"sad": "happy good vibes",
+# 			  "happy": "so happy, so very happy for you",
+# 			  "angry": "girl, you need to chill out",
+# 			  "nervous": "breathe, baby, breathe"}
 
-unikitty_dict = {"sad": "happy good vibes",
-			  "happy": "Everything is AWESOME!",
-			  "angry": "girl, you need to chill out",
-			  "nervous": "breathe, baby, breathe"}
+# unikitty_dict = {"sad": "happy good vibes",
+# 			  "happy": "Everything is AWESOME!",
+# 			  "angry": "girl, you need to chill out",
+# 			  "nervous": "breathe, baby, breathe"}
 
-brighticorn_dict = {"sad": "happy good vibes",
-			  "happy": "so happy, so very happy for you",
-			  "angry": "girl, you need to chill out",
-			  "nervous": "breathe, baby, breathe"}
+# brighticorn_dict = {"sad": "happy good vibes",
+# 			  "happy": "so happy, so very happy for you",
+# 			  "angry": "girl, you need to chill out",
+# 			  "nervous": "breathe, baby, breathe"}
+
+unlisted_emotions = {}
 
 on_call = random.choice(therapists)
 
@@ -66,6 +70,8 @@ def get_response(emotion, use_dict):
     emo_response = input("Please select an emotion: > ")
     if emo_response in use_dict:
         print(on_call, "says: ", use_dict[emo_response])
+        #save unlisted emtoion in emotional_dictionary
+        unlisted_emotions.[emo_response] = ""
     else:
         print("I'm sorry that's an emotion that doesn't exist in my world.  Please go away.")
         the_end()
@@ -80,3 +86,5 @@ welcome()
 on_call_dict = use_dict(on_call)
 emo = get_emotion()
 get_response(emo, on_call_dict)
+
+
